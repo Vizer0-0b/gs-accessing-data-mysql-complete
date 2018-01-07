@@ -13,10 +13,11 @@ public class WebContrpller {
     @Value("${application.message:1234556677}")  
     private String message = "hi,hello world......";  
   
+    // 请求
     @RequestMapping("/wb")
     public String web(Map<String,Object> model){  
         model.put("time",new Date(0));  
-        model.put("message",this.message);  
+        model.put("message",this.message);
         return "web";//返回的内容就是templetes下面文件的名称  
     }  
 }  
